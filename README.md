@@ -2,7 +2,7 @@
 
 Система управления гроубоксом на базе ESP32 с симуляцией в Wokwi.
 
-[![Wokwi](https://img.shields.io/badge/Wokwi-Simulate-blue)](https://wokwi.com/github/Andyinjiner/Growbox)
+[![Wokwi](https://img.shields.io/badge/Wokwi-Simulate-blue)](https://wokwi.com/github/AndyInjiner/growbox)
 
 ## Возможности
 
@@ -24,7 +24,7 @@
 
 1. Откройте репозиторий на GitHub
 2. Нажмите на бейдж **Wokwi Simulate**
-3. Или перейдите по ссылке: [https://wokwi.com/github/Andyinjiner/Growbox](https://wokwi.com/github/Andyinjiner/Growbox)
+3. Или перейдите по ссылке: [https://wokwi.com/github/AndyInjiner/growbox](https://wokwi.com/github/AndyInjiner/growbox)
 
 ## Подключение
 
