@@ -1,0 +1,150 @@
+{
+  "$schema": "https://wokwi.com/schema.json",
+  "version": 1,
+  "author": "Andyinjiner",
+  "editor": "wokwi",
+  "firmware": "src/main.cpp",
+  "partlist": [
+    {
+      "id": "esp32",
+      "part": "board-esp32-devkit-c-v4"
+    },
+    {
+      "id": "dht1",
+      "part": "board-dht22"
+    },
+    {
+      "id": "dht2",
+      "part": "board-dht22"
+    },
+    {
+      "id": "soil",
+      "part": "board-soil-moisture-sensor"
+    },
+    {
+      "id": "relay1",
+      "part": "board-relay-module-1ch"
+    },
+    {
+      "id": "relay2",
+      "part": "board-relay-module-1ch"
+    },
+    {
+      "id": "relay3",
+      "part": "board-relay-module-1ch"
+    },
+    {
+      "id": "relay4",
+      "part": "board-relay-module-1ch"
+    },
+    {
+      "id": "mosfet",
+      "part": "board-mosfet-irf520"
+    },
+    {
+      "id": "buzzer",
+      "part": "piezo-buzzer"
+    },
+    {
+      "id": "tft",
+      "part": "board-st7789"
+    },
+    {
+      "id": "btn1",
+      "part": "tactile-button"
+    },
+    {
+      "id": "btn2",
+      "part": "tactile-button"
+    },
+    {
+      "id": "r1",
+      "part": "resistor-through-hole-10k",
+      "attrs": { "resistance": "10000" }
+    },
+    {
+      "id": "r2",
+      "part": "resistor-through-hole-10k",
+      "attrs": { "resistance": "10000" }
+    },
+    {
+      "id": "r3",
+      "part": "resistor-through-hole-1k",
+      "attrs": { "resistance": "1000" }
+    }
+  ],
+  "connections": [
+    ["esp32:VU", "redBus:1", "black", ""],
+    ["esp32:GND", "blackBus:1", "black", ""],
+    
+    ["esp32:TX", "serial1:RX", "", ""],
+    ["esp32:RX", "serial1:TX", "", ""],
+    
+    ["esp32:3V3", "redBus:2", "red", ""],
+    ["esp32:GND.1", "blackBus:2", "black", ""],
+    
+    ["esp32:5V", "redBus:3", "orange", ""],
+    ["esp32:GND.2", "blackBus:3", "black", ""],
+    
+    ["esp32:G12", "mosfet:SIG", "purple", ""],
+    ["esp32:G13", "relay3:IN", "brown", ""],
+    ["esp32:G14", "btn1:1", "green", ""],
+    ["esp32:G15", "btn2:1", "blue", ""],
+    ["esp32:G16", "tft:DC", "yellow", ""],
+    ["esp32:G17", "tft:RST", "orange", ""],
+    ["esp32:G18", "tft:SCK", "white", ""],
+    ["esp32:G19", "tft:MISO", "gray", ""],
+    ["esp32:G2", "relay1:IN", "red", ""],
+    ["esp32:G23", "tft:MOSI", "pink", ""],
+    ["esp32:G25", "relay4:IN", "violet", ""],
+    ["esp32:G26", "r3:1", "cyan", ""],
+    ["esp32:G32", "dht1:DATA", "green", ""],
+    ["esp32:G33", "dht2:DATA", "blue", ""],
+    ["esp32:G34", "soil:AO", "brown", ""],
+    ["esp32:G5", "tft:CS", "red", ""],
+    
+    ["redBus:1", "redBus:2", "red", ""],
+    ["redBus:1", "redBus:3", "red", ""],
+    ["redBus:1", "dht1:VCC", "red", ""],
+    ["redBus:1", "dht2:VCC", "red", ""],
+    ["redBus:1", "soil:VCC", "red", ""],
+    ["redBus:1", "relay1:VCC", "red", ""],
+    ["redBus:1", "relay2:VCC", "red", ""],
+    ["redBus:1", "relay3:VCC", "red", ""],
+    ["redBus:1", "relay4:VCC", "red", ""],
+    ["redBus:1", "mosfet:VCC", "red", ""],
+    ["redBus:1", "tft:VCC", "red", ""],
+    
+    ["blackBus:1", "blackBus:2", "black", ""],
+    ["blackBus:1", "blackBus:3", "black", ""],
+    ["blackBus:1", "dht1:GND", "black", ""],
+    ["blackBus:1", "dht2:GND", "black", ""],
+    ["blackBus:1", "soil:GND", "black", ""],
+    ["blackBus:1", "relay1:GND", "black", ""],
+    ["blackBus:1", "relay2:GND", "black", ""],
+    ["blackBus:1", "relay3:GND", "black", ""],
+    ["blackBus:1", "relay4:GND", "black", ""],
+    ["blackBus:1", "mosfet:GND", "black", ""],
+    ["blackBus:1", "tft:GND", "black", ""],
+    ["blackBus:1", "btn1:2", "black", ""],
+    ["blackBus:1", "btn2:2", "black", ""],
+    ["blackBus:1", "buzzer:-", "black", ""],
+    
+    ["dht1:DATA", "r1:1", "", ""],
+    ["dht1:VCC", "r1:2", "", ""],
+    ["dht2:DATA", "r2:1", "", ""],
+    ["dht2:VCC", "r2:2", "", ""],
+    
+    ["r3:2", "buzzer:+", "", ""],
+    
+    ["tft:BLK", "redBus:1", "white", ""]
+  ],
+  "serialMonitor": {
+    "enabled": true,
+    "baud": 115200
+  },
+  "serial": true,
+  "wifi": {
+    "enabled": true
+  }
+}
