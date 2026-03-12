@@ -1,5 +1,5 @@
 @echo off
 cd /d "%~dp0"
 git add -A
-git commit -m "Add README with Wokwi badge"
+git commit -m "Move main.cpp to root for Wokwi compatibility"
 git push

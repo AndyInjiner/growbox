@@ -3,7 +3,7 @@
   "version": 1,
   "author": "Andyinjiner",
   "editor": "wokwi",
-  "firmware": "src/main.cpp",
+  "firmware": "main.cpp",
   "partlist": [
     {
       "id": "esp32",
